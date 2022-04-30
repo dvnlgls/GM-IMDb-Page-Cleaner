@@ -5,6 +5,8 @@
 // @description  Remove unnecessary information from IMDb & rearrange the layout
 // @grant    none
 // @match		 https://www.imdb.com/title/tt*
+// @namespace CosmicTowel42
+// @license GNU GPLv3
 // ==/UserScript==
 
 'use strict';
