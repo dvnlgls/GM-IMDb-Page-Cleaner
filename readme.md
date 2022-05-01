@@ -20,3 +20,6 @@ GitHub: https://github.com/dvnlgls/GM-IMDb-Page-Cleaner
 
 ### Version 1.0.1 (2022-05-01)
 - New: Remove watch options in "More Like This" section (suggestions)
+
+## Screenshot of before & after running the script:
+![IMDb Page Cleaner](https://github.com/dvnlgls/GM-IMDb-Page-Cleaner/raw/master/Screenshots/03_Comparison.jpg)
