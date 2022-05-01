@@ -4,6 +4,8 @@
 
 GitHub: https://github.com/dvnlgls/GM-IMDb-Page-Cleaner
 
+> Alternative solution: If you just want to remove unwanted stuff, uBlock Origin is a better option (you should be using it anyway). The benefit of this script is modifying site layout.
+
 ### Version: 1.0.1
 
 ### What this script does:
