@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     IMDb Page Cleaner
-// @version  1.0.0
+// @version  1.0.1
 // @author   Devin
 // @description  Remove unnecessary information from IMDb & rearrange the layout
 // @grant    none
