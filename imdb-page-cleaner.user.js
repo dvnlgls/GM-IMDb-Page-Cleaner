@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name     IMDb Page Cleaner
-// @version  1
+// @version  1.0.0
 // @author   Devin
 // @description  Remove unnecessary information from IMDb & rearrange the layout
 // @grant    none
-// @match		 https://www.imdb.com/title/tt*
+// @match    https://www.imdb.com/title/tt*
 // @namespace CosmicTowel42
 // @license GNU GPLv3
 // ==/UserScript==
@@ -34,9 +34,15 @@ function removeSections() {
   const editorial = [...document.querySelectorAll("[data-testid='main-column-editorial-single']")]; // can be many such sections
   const tvEpisodeHighlight = document.querySelectorAll("[data-testid='DynamicFeature_Episodes']")[0]; // only for tv shows
   const proLink = document.getElementById('ProUpsellLink'); // imdb pro link in the header
+  let suggestionsWatchOptions = [];  // section: More Like This
+  try{
+    suggestionsWatchOptions = [...document.querySelectorAll("[data-testid='MoreLikeThis']")[0].getElementsByClassName('ipc-poster-card__actions')];
+  } catch(e) {
+    console.log('IMDb Page Cleaner: "More like this" section not found. Nothing to worry.');
+  }
 
   // makse sure to add nodes to this array
-  const nodesToRemove = [boxOffice, news, contribution, techSpec, rightPane, editorial, tvEpisodeHighlight, headerWatchOptions, proLink, popularity];
+  const nodesToRemove = [boxOffice, news, contribution, techSpec, rightPane, editorial, tvEpisodeHighlight, headerWatchOptions, proLink, popularity, suggestionsWatchOptions];
   nodesToRemove.forEach(node => removeNode(node));
 }
 
