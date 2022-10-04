@@ -79,9 +79,17 @@ function modifyLayout() {
   }
 }
 
+function changeReviewUrl(){
+  const userReviews = document.querySelectorAll("[data-testid='UserReviews']")[0];
+  const currentUrl = userReviews.getElementsByClassName('ipc-title-link-wrapper')[0];
+  const modifiedUrl = currentUrl.href.split('reviews?')[0] + 'reviews?sort=reviewVolume&dir=desc&ratingFilter=0';
+  currentUrl.href = modifiedUrl; 
+  
+}
 
 (() => {
   modifyLayout();
   removeSections();
+  changeReviewUrl();
 })();
 
